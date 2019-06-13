@@ -1,0 +1,283 @@
+EESchema Schematic File Version 4
+LIBS:mudi-esp32-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Motion:LSM9DS1 U10
+U 1 1 5CC4E652
+P 5800 3400
+F 0 "U10" H 5800 2511 50  0000 C CNN
+F 1 "LSM9DS1" H 5800 2420 50  0000 C CNN
+F 2 "Package_LGA:LGA-24L_3x3.5mm_P0.43mm" H 7300 4150 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/1e/3f/2a/d6/25/eb/48/46/DM00103319.pdf/files/DM00103319.pdf/jcr:content/translations/en.DM00103319.pdf" H 5800 3500 50  0001 C CNN
+	1    5800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2600 5850 2600
+Wire Wire Line
+	5850 2600 5850 2400
+Connection ~ 5850 2600
+Wire Wire Line
+	5850 2600 5900 2600
+Text HLabel 5600 2150 0    50   Input ~ 0
+Vdd
+Wire Wire Line
+	5600 2150 5850 2150
+Wire Wire Line
+	6100 2650 6100 2600
+Connection ~ 6100 2600
+Wire Wire Line
+	6150 2400 5850 2400
+Wire Wire Line
+	6100 2600 6150 2600
+Connection ~ 5850 2400
+Wire Wire Line
+	5850 2400 5850 2150
+Wire Wire Line
+	6150 2400 6150 2600
+Connection ~ 6150 2600
+Wire Wire Line
+	6150 2600 6200 2600
+Wire Wire Line
+	6500 3500 6500 3600
+Wire Wire Line
+	6500 3700 6500 3600
+Connection ~ 6500 3600
+Wire Wire Line
+	6500 3800 6500 3700
+Connection ~ 6500 3700
+Wire Wire Line
+	6500 3900 6500 3800
+Connection ~ 6500 3800
+Wire Wire Line
+	5900 4200 6500 4200
+Wire Wire Line
+	6500 4200 6500 3900
+Connection ~ 6500 3900
+Wire Wire Line
+	5700 4200 5900 4200
+Connection ~ 5900 4200
+Wire Wire Line
+	6500 4200 6500 4450
+Connection ~ 6500 4200
+$Comp
+L power:GND #PWR0117
+U 1 1 5CC507D3
+P 6500 4450
+F 0 "#PWR0117" H 6500 4200 50  0001 C CNN
+F 1 "GND" H 6505 4277 50  0000 C CNN
+F 2 "" H 6500 4450 50  0001 C CNN
+F 3 "" H 6500 4450 50  0001 C CNN
+	1    6500 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3000 4600 3000
+Wire Wire Line
+	5100 3100 4600 3100
+Wire Wire Line
+	5100 3300 5050 3300
+Wire Wire Line
+	5050 3300 5050 3200
+Wire Wire Line
+	5050 3200 4600 3200
+Wire Wire Line
+	5100 3400 4950 3400
+Wire Wire Line
+	4950 3400 4950 3300
+Wire Wire Line
+	4950 3300 4600 3300
+Wire Wire Line
+	4850 3500 4850 3400
+Wire Wire Line
+	4850 3400 4600 3400
+Wire Wire Line
+	4850 3500 5100 3500
+Wire Wire Line
+	5100 3600 4750 3600
+Wire Wire Line
+	4750 3600 4750 3500
+Wire Wire Line
+	4750 3500 4600 3500
+Wire Wire Line
+	5100 3700 4650 3700
+Wire Wire Line
+	4650 3700 4650 3600
+Wire Wire Line
+	4650 3600 4600 3600
+Entry Wire Line
+	4500 2900 4600 3000
+Entry Wire Line
+	4500 3000 4600 3100
+Entry Wire Line
+	4500 3100 4600 3200
+Entry Wire Line
+	4500 3200 4600 3300
+Entry Wire Line
+	4500 3300 4600 3400
+Entry Wire Line
+	4500 3400 4600 3500
+Entry Wire Line
+	4500 3500 4600 3600
+Wire Bus Line
+	4500 2800 4250 2800
+Text HLabel 4250 2800 0    50   Input ~ 0
+DataGyAcc[0..6]
+$Comp
+L Device:C CF?
+U 1 1 5CC55A18
+P 5050 4350
+AR Path="/5B43A70D/5CC55A18" Ref="CF?"  Part="1" 
+AR Path="/5CC4E4FB/5CC55A18" Ref="C61"  Part="1" 
+F 0 "C61" H 5100 4450 50  0000 L CNN
+F 1 "100nF" H 5100 4250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 5050 4350 60  0001 C CNN
+F 3 "" H 5050 4350 60  0001 C CNN
+	1    5050 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4500 5050 4600
+Wire Wire Line
+	5050 4000 5050 4200
+Wire Wire Line
+	5100 4000 5050 4000
+$Comp
+L Device:C CF?
+U 1 1 5CC56E49
+P 4500 4350
+AR Path="/5B43A70D/5CC56E49" Ref="CF?"  Part="1" 
+AR Path="/5CC4E4FB/5CC56E49" Ref="C60"  Part="1" 
+F 0 "C60" H 4550 4450 50  0000 L CNN
+F 1 "10nF (16v)" H 4550 4250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4500 4350 60  0001 C CNN
+F 3 "" H 4500 4350 60  0001 C CNN
+	1    4500 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4500 4500 4600
+Wire Wire Line
+	5100 3900 4500 3900
+Wire Wire Line
+	4500 3900 4500 4200
+$Comp
+L power:GND #PWR0118
+U 1 1 5CC59229
+P 5050 4600
+F 0 "#PWR0118" H 5050 4350 50  0001 C CNN
+F 1 "GND" H 5055 4427 50  0000 C CNN
+F 2 "" H 5050 4600 50  0001 C CNN
+F 3 "" H 5050 4600 50  0001 C CNN
+	1    5050 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 5CC596D2
+P 4500 4600
+F 0 "#PWR0119" H 4500 4350 50  0001 C CNN
+F 1 "GND" H 4505 4427 50  0000 C CNN
+F 2 "" H 4500 4600 50  0001 C CNN
+F 3 "" H 4500 4600 50  0001 C CNN
+	1    4500 4600
+	1    0    0    -1  
+$EndComp
+Text Notes 3350 4550 0    50   ~ 0
+ 10 nF (±10%), 16 V. 1 nF \nminimum value has to \nbe guaranteed under 11 V \nbias condition.
+$Comp
+L Device:C C?
+U 1 1 5CC59D62
+P 7050 2350
+AR Path="/5B43A70D/5CC59D62" Ref="C?"  Part="1" 
+AR Path="/5CC4E4FB/5CC59D62" Ref="C59"  Part="1" 
+F 0 "C59" H 7100 2450 50  0000 L CNN
+F 1 "100nF" H 7100 2250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7050 2350 60  0001 C CNN
+F 3 "" H 7050 2350 60  0001 C CNN
+	1    7050 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5CC5A5F0
+P 6600 2350
+AR Path="/5B43A70D/5CC5A5F0" Ref="C?"  Part="1" 
+AR Path="/5CC4E4FB/5CC5A5F0" Ref="C58"  Part="1" 
+F 0 "C58" H 6650 2450 50  0000 L CNN
+F 1 "100nF" H 6650 2250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 6600 2350 60  0001 C CNN
+F 3 "" H 6600 2350 60  0001 C CNN
+	1    6600 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 2150 6600 2150
+Wire Wire Line
+	7050 2150 7050 2200
+Connection ~ 5850 2150
+Wire Wire Line
+	6600 2150 6600 2200
+Connection ~ 6600 2150
+Wire Wire Line
+	6600 2150 7050 2150
+$Comp
+L power:GND #PWR0120
+U 1 1 5CC5CAD4
+P 7050 2500
+F 0 "#PWR0120" H 7050 2250 50  0001 C CNN
+F 1 "GND" H 7055 2327 50  0000 C CNN
+F 2 "" H 7050 2500 50  0001 C CNN
+F 3 "" H 7050 2500 50  0001 C CNN
+	1    7050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 5CC5D344
+P 6600 2500
+F 0 "#PWR0121" H 6600 2250 50  0001 C CNN
+F 1 "GND" H 6605 2327 50  0000 C CNN
+F 2 "" H 6600 2500 50  0001 C CNN
+F 3 "" H 6600 2500 50  0001 C CNN
+	1    6600 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3000 6700 3000
+Entry Wire Line
+	6700 3000 6800 3100
+Wire Wire Line
+	6500 3100 6700 3100
+Entry Wire Line
+	6700 3100 6800 3200
+Wire Wire Line
+	6500 3200 6700 3200
+Entry Wire Line
+	6700 3200 6800 3300
+Wire Wire Line
+	6500 3300 6700 3300
+Entry Wire Line
+	6700 3300 6800 3400
+Wire Bus Line
+	6800 3500 7000 3500
+Wire Bus Line
+	6800 3100 6800 3500
+Wire Bus Line
+	4500 2800 4500 3500
+Text HLabel 7000 3500 2    50   Input ~ 0
+DataMag[0..4]
+$EndSCHEMATC

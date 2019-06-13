@@ -1,0 +1,518 @@
+EESchema Schematic File Version 4
+LIBS:mudi-esp32-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 8
+Title "MIDU-ESP32"
+Date "2018-07-26"
+Rev "V1.0"
+Comp "UNIVERSIDAD ECCI          "
+Comment1 "@fabeltranm"
+Comment2 "FERNEY A BELTRAN M        "
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Project:MAX98357A U8
+U 1 1 5B50CDEE
+P 3050 1500
+F 0 "U8" H 3100 850 60  0000 C CNN
+F 1 "MAX98357A" H 3300 1850 60  0000 C CNN
+F 2 "Project:TQFN16" H 3050 1500 60  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX98357A-MAX98357B.pdf" H 3050 1500 60  0001 C CNN
+F 4 "MAX98357AETE+TTR-ND" H 3050 1500 60  0001 C CNN "DIGIKEY REF"
+	1    3050 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2450 7050 2450
+Wire Wire Line
+	6150 2550 7050 2550
+Wire Wire Line
+	6150 2650 7050 2650
+Text Label 2450 1700 0    60   ~ 0
+sdmode
+Text Label 2450 1800 0    60   ~ 0
+BCLK
+Text Label 2450 1900 0    60   ~ 0
+LRCLK
+Text Label 2450 2000 0    60   ~ 0
+DIN
+Wire Wire Line
+	3900 1400 4000 1400
+Wire Wire Line
+	4000 1400 4000 1450
+Wire Wire Line
+	4000 1500 3900 1500
+Wire Wire Line
+	2850 1400 2750 1400
+Wire Wire Line
+	2750 1400 2750 1300
+Wire Wire Line
+	1050 1300 1350 1300
+$Comp
+L Device:C C45
+U 1 1 5B50EDB7
+P 1700 1450
+F 0 "C45" H 1500 1450 50  0000 L CNN
+F 1 "100nF" H 1500 1350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 1700 1450 60  0001 C CNN
+F 3 "" H 1700 1450 60  0001 C CNN
+	1    1700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR068
+U 1 1 5B50EDBE
+P 1350 1650
+F 0 "#PWR068" H 1350 1400 50  0001 C CNN
+F 1 "GND" H 1350 1500 50  0000 C CNN
+F 2 "" H 1350 1650 50  0000 C CNN
+F 3 "" H 1350 1650 50  0000 C CNN
+	1    1350 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1600 1350 1650
+$Comp
+L power:GND #PWR069
+U 1 1 5B50EDC5
+P 1700 1650
+F 0 "#PWR069" H 1700 1400 50  0001 C CNN
+F 1 "GND" H 1700 1500 50  0000 C CNN
+F 2 "" H 1700 1650 50  0000 C CNN
+F 3 "" H 1700 1650 50  0000 C CNN
+	1    1700 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1600 1700 1650
+$Comp
+L Device:C C44
+U 1 1 5B50EDCC
+P 1350 1450
+F 0 "C44" H 1150 1450 50  0000 L CNN
+F 1 "10uF" H 1150 1350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1350 1450 60  0001 C CNN
+F 3 "" H 1350 1450 60  0001 C CNN
+	1    1350 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 2750 1300
+Connection ~ 1700 1300
+Connection ~ 1350 1300
+Text HLabel 1200 650  0    60   Input ~ 0
+Vcc_in(3v)
+$Comp
+L power:GND #PWR070
+U 1 1 5B50EE96
+P 4200 1450
+F 0 "#PWR070" H 4200 1200 50  0001 C CNN
+F 1 "GND" H 4200 1300 50  0000 C CNN
+F 2 "" H 4200 1450 50  0000 C CNN
+F 3 "" H 4200 1450 50  0000 C CNN
+	1    4200 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1450 4000 1450
+Connection ~ 4000 1450
+Entry Wire Line
+	6050 2550 6150 2450
+Entry Wire Line
+	6050 2750 6150 2650
+Entry Wire Line
+	6050 2650 6150 2550
+Entry Wire Line
+	6050 2850 6150 2750
+Text HLabel 5850 3000 0    60   Input ~ 0
+i2s[0..4]
+Wire Wire Line
+	2850 1550 2450 1550
+Text Label 2450 1550 0    60   ~ 0
+Gain
+$Comp
+L mudi-esp32-rescue:CONN_02X03-conn P5
+U 1 1 5B50F8E1
+P 1450 3100
+F 0 "P5" H 1450 3300 50  0000 C CNN
+F 1 "GAIN_SLOT" H 1450 2900 50  0000 C CNN
+F 2 "" H 1450 1900 50  0001 C CNN
+F 3 "" H 1450 1900 50  0000 C CNN
+	1    1450 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3100 1950 3100
+Wire Wire Line
+	1200 3100 900  3100
+Text Label 900  3100 0    60   ~ 0
+Gain
+Text Label 1950 3100 2    60   ~ 0
+Gain
+Text Label 1050 1300 0    60   ~ 0
+vdd_audio
+Text Label 1750 3000 0    60   ~ 0
+vdd_audio
+Wire Wire Line
+	1700 3000 1950 3000
+$Comp
+L Device:R R43
+U 1 1 5B51034F
+P 1100 3350
+F 0 "R43" V 1180 3350 50  0000 C CNN
+F 1 "100k" V 1100 3350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 1100 3350 60  0001 C CNN
+F 3 "" H 1100 3350 60  0001 C CNN
+	1    1100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR071
+U 1 1 5B510356
+P 1100 3500
+F 0 "#PWR071" H 1100 3250 50  0001 C CNN
+F 1 "GND" H 1100 3350 50  0000 C CNN
+F 2 "" H 1100 3500 50  0000 C CNN
+F 3 "" H 1100 3500 50  0000 C CNN
+	1    1100 3500
+	1    0    0    -1  
+$EndComp
+Text Notes 2350 3500 0    60   ~ 0
+ GAIN_SLOT         \n GND through 100k   \n GND                            \n Unconnected       \n VDD                    \n VDD through 100k
+Text Notes 3450 3500 0    60   ~ 0
+  I2S/LJ GAIN (dB)\n          15\n          12\n          9\n          6\n          3\n
+Wire Notes Line
+	2300 3050 5050 3050
+Wire Notes Line
+	4400 2950 4400 3500
+Wire Notes Line
+	2300 3500 5050 3500
+Wire Notes Line
+	2300 3500 2300 2950
+Wire Notes Line
+	2300 2950 5050 2950
+Wire Notes Line
+	3400 2950 3400 3500
+$Comp
+L power:GND #PWR072
+U 1 1 5B510910
+P 1850 3500
+F 0 "#PWR072" H 1850 3250 50  0001 C CNN
+F 1 "GND" H 1850 3350 50  0000 C CNN
+F 2 "" H 1850 3500 50  0000 C CNN
+F 3 "" H 1850 3500 50  0000 C CNN
+	1    1850 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3200 1850 3200
+Wire Wire Line
+	1850 3200 1850 3500
+Wire Wire Line
+	1200 3200 1100 3200
+$Comp
+L Device:R R42
+U 1 1 5B510A1F
+P 1100 2850
+F 0 "R42" V 1180 2850 50  0000 C CNN
+F 1 "100k" V 1100 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 1100 2850 60  0001 C CNN
+F 3 "" H 1100 2850 60  0001 C CNN
+	1    1100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 3000 1100 3000
+Wire Wire Line
+	1100 2700 1700 2700
+Wire Wire Line
+	1700 2700 1700 3000
+Text Notes 4450 3500 0    60   ~ 0
+Pin Connect\n 3 - 5\n 4 - 6\n 3 - 4\n 4 - 2 \n 3 - 6
+Wire Notes Line
+	5050 2950 5050 3500
+Wire Wire Line
+	3900 1750 4300 1750
+$Comp
+L Device:C C48
+U 1 1 5B512D3E
+P 4000 2100
+F 0 "C48" H 3800 2100 50  0000 L CNN
+F 1 "220pF" H 3750 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4000 2100 60  0001 C CNN
+F 3 "" H 4000 2100 60  0001 C CNN
+	1    4000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C49
+U 1 1 5B512ECB
+P 4300 2100
+F 0 "C49" H 4100 2100 50  0000 L CNN
+F 1 "220pF" H 4050 2000 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4300 2100 60  0001 C CNN
+F 3 "" H 4300 2100 60  0001 C CNN
+	1    4300 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR073
+U 1 1 5B512EFE
+P 4000 2250
+F 0 "#PWR073" H 4000 2000 50  0001 C CNN
+F 1 "GND" H 4000 2100 50  0000 C CNN
+F 2 "" H 4000 2250 50  0000 C CNN
+F 3 "" H 4000 2250 50  0000 C CNN
+	1    4000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR074
+U 1 1 5B512F24
+P 4300 2250
+F 0 "#PWR074" H 4300 2000 50  0001 C CNN
+F 1 "GND" H 4300 2100 50  0000 C CNN
+F 2 "" H 4300 2250 50  0000 C CNN
+F 3 "" H 4300 2250 50  0000 C CNN
+	1    4300 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 1950 4300 1750
+Connection ~ 4300 1750
+Wire Wire Line
+	4000 1950 4000 1850
+Connection ~ 4000 1850
+Wire Wire Line
+	3900 1850 4000 1850
+$Comp
+L mudi-esp32-rescue:SPEAKER SP1
+U 1 1 5B513A54
+P 4850 1800
+F 0 "SP1" H 4750 2050 50  0000 C CNN
+F 1 "SPEAKER" H 4750 1550 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 4850 1800 50  0001 C CNN
+F 3 "" H 4850 1800 50  0000 C CNN
+	1    4850 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1750 4450 1700
+Wire Wire Line
+	4450 1700 4550 1700
+Wire Wire Line
+	4550 1900 4450 1900
+Wire Wire Line
+	4450 1900 4450 1850
+Wire Wire Line
+	1200 650  2050 650 
+Text Label 2050 650  0    60   ~ 0
+vdd_audio
+$Comp
+L Project:SPH0645LM4H-B MK1
+U 1 1 5B5144F0
+P 8600 1400
+F 0 "MK1" H 8098 1621 50  0000 L BNN
+F 1 "SPH0645LM4H-B" H 8100 1100 50  0000 L BNN
+F 2 "Project:SPH0645LM4H" H 8600 1400 50  0001 L BNN
+F 3 "Mic Mems Digital I2s Omni -26db" H 8600 1400 50  0001 L BNN
+	1    8600 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C47
+U 1 1 5B515109
+P 10550 1450
+F 0 "C47" H 10350 1450 50  0000 L CNN
+F 1 "100nF" H 10350 1350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10550 1450 60  0001 C CNN
+F 3 "" H 10550 1450 60  0001 C CNN
+	1    10550 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR075
+U 1 1 5B515110
+P 10550 1650
+F 0 "#PWR075" H 10550 1400 50  0001 C CNN
+F 1 "GND" H 10550 1500 50  0000 C CNN
+F 2 "" H 10550 1650 50  0000 C CNN
+F 3 "" H 10550 1650 50  0000 C CNN
+	1    10550 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10550 1600 10550 1650
+$Comp
+L Device:C C46
+U 1 1 5B515B54
+P 10250 1450
+F 0 "C46" H 10050 1450 50  0000 L CNN
+F 1 "220pF" H 10000 1350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 10250 1450 60  0001 C CNN
+F 3 "" H 10250 1450 60  0001 C CNN
+	1    10250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR076
+U 1 1 5B515B5B
+P 10250 1650
+F 0 "#PWR076" H 10250 1400 50  0001 C CNN
+F 1 "GND" H 10250 1500 50  0000 C CNN
+F 2 "" H 10250 1650 50  0000 C CNN
+F 3 "" H 10250 1650 50  0000 C CNN
+	1    10250 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 1600 10250 1650
+$Comp
+L power:GND #PWR077
+U 1 1 5B515DD3
+P 9500 1650
+F 0 "#PWR077" H 9500 1400 50  0001 C CNN
+F 1 "GND" H 9500 1500 50  0000 C CNN
+F 2 "" H 9500 1650 50  0000 C CNN
+F 3 "" H 9500 1650 50  0000 C CNN
+	1    9500 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 1500 9500 1500
+Wire Wire Line
+	9500 1500 9500 1650
+Wire Wire Line
+	9300 1300 10250 1300
+Connection ~ 10250 1300
+Wire Wire Line
+	9600 1400 9900 1400
+Text Label 9900 1400 2    60   ~ 0
+DOUT
+Wire Wire Line
+	7600 1400 7900 1400
+$Comp
+L power:GND #PWR078
+U 1 1 5B51665A
+P 7600 1650
+F 0 "#PWR078" H 7600 1400 50  0001 C CNN
+F 1 "GND" H 7600 1500 50  0000 C CNN
+F 2 "" H 7600 1650 50  0000 C CNN
+F 3 "" H 7600 1650 50  0000 C CNN
+	1    7600 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1400 7600 1650
+Wire Wire Line
+	7900 1500 7650 1500
+Text Label 7650 1500 0    60   ~ 0
+BCLK
+Wire Wire Line
+	3900 1300 4000 1300
+Wire Wire Line
+	4000 1300 4000 1450
+Text Label 10000 1300 0    60   ~ 0
+vdd_audio
+Wire Bus Line
+	6050 3000 5850 3000
+Text Label 6150 2750 0    60   ~ 0
+i2s_4
+Text Label 6150 2450 0    60   ~ 0
+i2s_1
+Text Label 6150 2550 0    60   ~ 0
+i2s_2
+Text Label 6150 2650 0    60   ~ 0
+i2s_3
+$Comp
+L power:GND #PWR079
+U 1 1 5B64222E
+P 3400 2300
+F 0 "#PWR079" H 3400 2050 50  0001 C CNN
+F 1 "GND" H 3400 2150 50  0000 C CNN
+F 2 "" H 3400 2300 50  0000 C CNN
+F 3 "" H 3400 2300 50  0000 C CNN
+	1    3400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R41
+U 1 1 5B67AB3A
+P 9450 1400
+F 0 "R41" V 9530 1400 50  0000 C CNN
+F 1 "51R" V 9450 1400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0603" H 9450 1400 60  0001 C CNN
+F 3 "" H 9450 1400 60  0001 C CNN
+	1    9450 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6150 2750 7050 2750
+Text Label 7700 1300 0    60   ~ 0
+WS
+Text Label 6600 2550 2    60   ~ 0
+DIN
+Text Label 6800 2650 0    60   ~ 0
+DOUT
+Wire Wire Line
+	2850 1700 2450 1700
+Wire Wire Line
+	2850 1800 2450 1800
+Wire Wire Line
+	2850 1900 2450 1900
+Wire Wire Line
+	2850 2000 2450 2000
+Wire Wire Line
+	6150 2350 7050 2350
+Entry Wire Line
+	6050 2450 6150 2350
+Text Label 6150 2350 0    60   ~ 0
+i2s_0
+Text Label 6800 2450 0    60   ~ 0
+BCLK
+Text Label 6450 2350 0    60   ~ 0
+LRCLK
+Wire Wire Line
+	7900 1300 7700 1300
+Text Label 6800 2350 0    60   ~ 0
+WS
+Wire Notes Line
+	6400 2150 6400 2800
+Wire Notes Line
+	6750 2150 6750 2800
+Text Label 6750 2750 2    60   ~ 0
+sdmode
+Text Label 6450 2450 0    60   ~ 0
+BCLK
+Text Notes 6250 2250 0    39   ~ 0
+I2S   MAX98357 SPH0645LM4H 
+Wire Notes Line
+	7200 2150 7200 2800
+Wire Notes Line
+	7200 2150 6100 2150
+Wire Notes Line
+	6100 2150 6100 2800
+Wire Notes Line
+	6100 2800 7200 2800
+Wire Notes Line
+	6100 2250 7200 2250
+Wire Wire Line
+	2750 1300 2850 1300
+Wire Wire Line
+	1700 1300 2750 1300
+Wire Wire Line
+	1350 1300 1700 1300
+Wire Wire Line
+	4000 1450 4000 1500
+Wire Wire Line
+	4300 1750 4450 1750
+Wire Wire Line
+	4000 1850 4450 1850
+Wire Wire Line
+	10250 1300 10550 1300
+Wire Bus Line
+	6050 2450 6050 3000
+$EndSCHEMATC
